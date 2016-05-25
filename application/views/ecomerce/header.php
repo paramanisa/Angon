@@ -47,6 +47,7 @@
 			<div class="upperHeader">
 				<div class="container">
 					<ul class="pull-right inline">
+					<?php if($this->session->userdata('kategori_user')== 'Peternak' || $this->session->userdata('kategori_user') =='Pengguna Hasil Ternak'){?>
 						<?php if($this->session->userdata('kategori_user') == 'Peternak'){
 							echo "<li><a class='invarseColor' href='".base_url()."manage/pesanan'>Penjualan Saya</a></li>
 						<li class='divider-vertical'></li>";
@@ -55,7 +56,7 @@
 						<li class="divider-vertical"></li>
 
 						<li><a class="invarseColor" href="<?php echo base_url(); ?>admin/keluhan/input_keluhan">Customer Care</a></li>
-
+						<?php } ?>
 					</ul>
 					<p>
 					

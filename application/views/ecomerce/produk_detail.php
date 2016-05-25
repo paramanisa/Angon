@@ -142,13 +142,29 @@
 											</div>
 
 											<textarea name="" class="span4" placeholder="textarea..."></textarea>-->
-
-											<div class="input-append">
+											<?php  if (($this->session->userdata('kategori_user') == 'Peternak') && (stristr($det->id_kategori_jenis, "I"))) {?> 
+											<div >
 											<a href="<?php echo base_url(); ?>ecomerce/shoppingcart/buy/<?php echo $det->id_produk; ?>">
 											<button class="btn btn-primary"><i class="icon-shopping-cart"></i> Beli Produk</button></a>
+
+											<a href="<?php echo base_url(); ?>ecomerce/compare_produk/com/<?php echo $det->id_produk; ?>">
+											<button class="btn btn-primary"><i></i> Bandingkan Produk</button></a>
 											<br>
 											<br>
 											</div>
+											<?php } ?>
+
+											<?php  if (($this->session->userdata('kategori_user') == 'Pengguna Hasil Ternak') && (stristr($det->id_kategori_jenis, "P"))) {?> 
+											<div >
+											<a href="<?php echo base_url(); ?>ecomerce/shoppingcart/buy/<?php echo $det->id_produk; ?>">
+											<button class="btn btn-primary"><i class="icon-shopping-cart"></i> Beli Produk</button></a>
+
+											<a href="<?php echo base_url(); ?>ecomerce/compare_produk/com/<?php echo $det->id_produk; ?>">
+											<button class="btn btn-primary"><i></i> Bandingkan Produk</button></a>
+											<br>
+											<br>
+											</div>
+											<?php } ?>
 											
 										<!--</form>end form-->
 
@@ -167,10 +183,19 @@
 						
 						  <li class="dropdown">
 						  	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Review<i class="icon-caret-down"></i></a>
-						  	<ul class="dropdown-menu">
-						  		<li><a href="#read-review" data-toggle="tab">Baca Review</a></li>
-						  		<li><a href="#make-review" data-toggle="tab">Tulis Review</a></li>
-						  	</ul>
+						  	<ul class="dropdown-menu"> 
+						  
+
+						  	 	<?php  if (($this->session->userdata('kategori_user') == 'Peternak') && (stristr($det->id_kategori_jenis, "I"))) {?> 
+						  	 	<li><a href="#make-review" data-toggle="tab">Tulis Review</a></li> 
+						  	 	<?php } ?>
+
+						  	 	<?php if (($this->session->userdata('kategori_user') == 'Pengguna Hasil Ternak') && (stristr($det->id_kategori_jenis, "P"))) {?>
+						  	 	 <li><a href="#make-review" data-toggle="tab">Tulis Review</a></li> 
+						  	 	<?php } ?>
+
+						  	 		<li><a href="#read-review" data-toggle="tab">Baca Review</a></li>
+						  	 	</ul>
 						  </li>
 						</ul>
 						<div class="tab-content">

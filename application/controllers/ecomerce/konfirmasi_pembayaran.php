@@ -66,7 +66,6 @@ public function __construct() {
 
  public function menampilkan_pembayaran(){
     $tgl = ($this->input->get('tanggal') != '') ? date("Y-m-d", strtotime($this->input->get('tanggal'))) : '' ;
-
     $bank = $this->input->get('nama_bank');
     $status = $this->input->get('status');
 

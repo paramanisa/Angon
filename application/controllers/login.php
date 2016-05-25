@@ -30,7 +30,7 @@ class Login extends MY_Controller {
          //  }
 
            if($this->session->userdata('kategori_user') == 'Industri Ternak' ) {
-              redirect('manage/pesanan');
+              redirect('manage/produk/lihat_produk');
            } else {
             echo $this->session->userdata('kategori_user');
             redirect('ecomerce/produk/');

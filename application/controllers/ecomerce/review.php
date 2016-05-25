@@ -15,7 +15,7 @@ public function __construct() {
 
   public function tambah_review($id_produk){
     $this->review_model->tbh_review($id_produk);
-    redirect('ecomerce/produk');
+    redirect('ecomerce/produk/detail/'.$id_produk.'');
  }
 
 

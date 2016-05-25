@@ -54,7 +54,7 @@ public function __construct() {
       $hasil = $det_trans_produk->stok - $det_trans->jumlah;
       $this->m_produk->update_stok($det_trans_produk->id_produk,$hasil);
     }
-    redirect('manage/pesanan/detail_pesanan/'.$det_trans_produk->id_transaksi);
+    redirect('manage/pesanan/detail_pesanan/'.$data_detail->id_transaksi);
  }
 
 function update_resi($id_det_trans) {

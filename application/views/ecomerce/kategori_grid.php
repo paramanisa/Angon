@@ -37,6 +37,7 @@
 
 					<div class="row">
 						<ul class="hProductItems clearfix">
+						<?php if($cari_produk != null){?>
 							<?php foreach($cari_produk as $p){	?>
 							<li class="span3 clearfix">
 								<div class="thumbnail">
@@ -71,8 +72,15 @@
 								</div>
 							</li>
 
-							<?php }?>
-							
+							<?php }
+							} else {?>
+								<div class="span 9">
+								<div class ="alert alert-error">
+									<button type="button" class="close" data-dismiss="alert">&times;</button>
+									<h4>Ops, Maaf</h4>
+									Produk sedang tidak tersedia!
+								</div>
+								<?php } ?>
 						</ul>
 					</div><!--end row-->
 

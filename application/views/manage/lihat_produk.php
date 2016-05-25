@@ -58,8 +58,7 @@
 							<div class="caption">
 								<i class="fa fa-gift"></i>Produk Peternakan
 								<br>
-								<br>
-								<a href=" <?php echo base_url() ?>manage/produk"> <button class="btn btn-sm red filter-submit margin-bottom" ><i class=""></i>Tambah Produk</button></a>
+								<br>								<a href=" <?php echo base_url() ?>manage/produk"> <button class="btn btn-sm red filter-submit margin-bottom" ><i class=""></i>Tambah Produk</button></a>
 							</div>
 						</div>
 						<div class="portlet-body">

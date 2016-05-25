@@ -168,7 +168,7 @@
 							<div class="control-group ">
 							    <label class="control-label" for="inputConPass">Password: <span class="text-error">*</span></label>
 							    <div class="controls">
-							      <input type="text" id="inputConPass" name="password" placeholder="**********" required>
+							      <input type="password" id="inputConPass" name="password" placeholder="**********" required>
 							    </div>
 							</div><!--end control-group-->
 

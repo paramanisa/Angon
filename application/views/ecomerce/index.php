@@ -138,23 +138,7 @@
 											<span> Rp. <?php echo $p->harga_produk; ?></span>
 										</div>
 
-										<div class="thumbButtons">
-											<?php if ($this->session->userdata('kategori_user') == 'Peternak' ||
-											$this->session->userdata('kategori_user') == 'Pengguna Hasil Ternak' ) { ?>
-											<a href="<?php echo base_url(); ?>ecomerce/shoppingcart/buy/<?php echo $p->id_produk; ?>">
-												<button class="btn btn-primary btn-small" data-title="Beli Produk" data-placement="top" data-toggle="tooltip">
-													<i class="icon-shopping-cart"></i> 
-												</button>
-											</a>
-											<?php }?>
 										
-											<a href="<?php echo base_url(); ?>ecomerce/compare_produk/com/<?php echo $p->id_produk; ?>">
-												<button class="btn btn-small" data-title="+ Bandingkan" data-placement="top" data-toggle="tooltip">
-													<i class="icon-refresh"></i>
-												</button>
-											</a>
-
-										</div>
 								</li>
 								<?php }?>
 								
